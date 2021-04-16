@@ -29,7 +29,8 @@ The dataset contains data based on these attributes:-
 
 ### Access
 
-The dataset CSV file is hosted in the Github repository. Thus, the dataset is accessed raw. Then in the Azure Dataset library to download and convert the csv file to a dataset that can be used by the notebook.
+The dataset CSV file is hosted in the Github repository. Thus, the dataset is accessed raw, whose URL is "https://raw.githubusercontent.com/Sara-cos/Heart_Faliure_PredictionModel/main/starter_file/heart_failure_clinical_records_dataset.csv". 
+Then in the Azure Dataset library to download and convert the csv file to a dataset that can be used by the notebook.
 
 ## Automated ML
 
