@@ -7,15 +7,21 @@ People with cardiovascular disease or who are at high cardiovascular risk (due t
 
 The dataset contains data based on these attributes:-
 1. age
-2. anaemia [decreased red blood cell]
+2. anaemia [whether the person had anaemia or not]
 3. creatinine phosphorus [Level of CPK enszyme in the blood]
-4. diabetes 
+4. diabetes [whether thr person has diabetes or not]
 5. ejection fraction [Percentage of blood leaving the heart at each contraction]
-6. high blood preassure
-7. platelets
-8. serum creatinine
-9. serum sodium
+6. high blood preassure [whether had HBP]
+7. platelets [kiloplatelets/ml]
+8. serum creatinine [mg/dL]
+9. serum sodium [mEq/L]
 10. sex
+11. smoking [weather the person smokes or not]
+12. time [days]
+13. death event [if the person surcumbed due to heart failure]
+
+
+
 
 
 
