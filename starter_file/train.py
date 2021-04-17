@@ -15,8 +15,13 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
 
-web_path = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
-ds = Dataset.Tabular.from_delimited_files(path=web_path,
+web_path = "https://raw.githubusercontent.com/Sara-cos/Heart_Faliure_PredictionModel/main/starter_file/heart_failure_clinical_records_dataset.csv"
+ds = Dataset.Tabular.from_delimited_files(web_path,
+                                          validate=True,
+                                          set_column_types= None,
+                                          header = True,
+                                          partition_format=None,
+                                          empty_as_string = False,
                                           support_multi_line=False,
                                           separator=',',
                                           infer_column_types=True,
@@ -26,35 +31,22 @@ x, y = clean_data(ds)
 
 # TODO: Split data into train and test sets.
 
-x_train, x_test , y_train, y_test =  train_test_split(x,y,test_size=0.33,random_state = 46)
+x_train, x_test , y_train, y_test =  train_test_split(x,y,test_size=0.2,random_state = 36)
 
 run = Run.get_context()
 
 def clean_data(data):
-    # Dict for cleaning data
-    months = {"jan":1, "feb":2, "mar":3, "apr":4, "may":5, "jun":6, "jul":7, "aug":8, "sep":9, "oct":10, "nov":11, "dec":12}
-    weekdays = {"mon":1, "tue":2, "wed":3, "thu":4, "fri":5, "sat":6, "sun":7}
+    # Dict for cleaning dat
 
-    # Clean and one hot encode data
+    
     x_df = data.to_pandas_dataframe().dropna()
-    jobs = pd.get_dummies(x_df.job, prefix="job")
-    x_df.drop("job", inplace=True, axis=1)
-    x_df = x_df.join(jobs)
-    x_df["marital"] = x_df.marital.apply(lambda s: 1 if s == "married" else 0)
-    x_df["default"] = x_df.default.apply(lambda s: 1 if s == "yes" else 0)
-    x_df["housing"] = x_df.housing.apply(lambda s: 1 if s == "yes" else 0)
-    x_df["loan"] = x_df.loan.apply(lambda s: 1 if s == "yes" else 0)
-    contact = pd.get_dummies(x_df.contact, prefix="contact")
-    x_df.drop("contact", inplace=True, axis=1)
-    x_df = x_df.join(contact)
-    education = pd.get_dummies(x_df.education, prefix="education")
-    x_df.drop("education", inplace=True, axis=1)
-    x_df = x_df.join(education)
-    x_df["month"] = x_df.month.map(months)
-    x_df["day_of_week"] = x_df.day_of_week.map(weekdays)
-    x_df["poutcome"] = x_df.poutcome.apply(lambda s: 1 if s == "success" else 0)
+    
 
-    y_df = x_df.pop("y").apply(lambda s: 1 if s == "yes" else 0)
+    print(x_df.shape)
+
+    y_df = x_df.pop("DEATH_EVENT")
+    print(x_df.shape)
+    print(y_df.shape)
     return x_df,y_df
 
 def main():
@@ -75,7 +67,7 @@ def main():
     run.log("Accuracy", np.float(accuracy))
 
     os.makedirs(./outputs, exist_ok = True)
-    joblib.dump(value=model, filename ="./outputs/model.joblib")
+    joblib.dump(value=model, filename ='./outputs/model.joblib')
 
 if __name__ == '__main__':
     main()
