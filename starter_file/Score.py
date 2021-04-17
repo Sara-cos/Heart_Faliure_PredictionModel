@@ -6,7 +6,8 @@ import numpy as np
 import pandas as pd
 import joblib
 
-import azureml.core.model import Model
+from azureml.core.model import Model
+
 from inference_schema.schema_decorators import input_schema, output_schema
 from inference_schema.parameter_types.numpy_parameter_type import NumpyParameterType
 from inference_schema.parameter_types.pandas_parameter_type import PandasParameterType
