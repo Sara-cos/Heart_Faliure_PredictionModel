@@ -1,0 +1,10 @@
+2021-04-17 08:35:40.993 - INFO - 9623 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-04-17 08:35:41.010 - INFO - 9623 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-04-17 08:35:41.021 - INFO - 9623 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2021-04-17 08:35:41.150 - INFO - 9623 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=128.98[ms]
+2021-04-17 08:35:41.207 - INFO - 9623 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=196.69[ms]
+2021-04-17 08:35:41.207 - INFO - 9623 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2021-04-17 08:36:19.303 - INFO - 9623 - azureml.automl.runtime.featurization.data_transformer.__init__:173 - Feature sweeping enabled: False
+2021-04-17 08:36:19.303 - INFO - 9623 - azureml.automl.runtime.featurization.data_transformer.__init__:174 - Feature sweeping timeout: 86400
+2021-04-17 08:36:25.067 - INFO - 9623 - azureml.train.automl._model_download_utilities._log_activity:93 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=43860.1[ms]
+2021-04-17 08:36:25.118 - INFO - 9623 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=44125.08[ms]
