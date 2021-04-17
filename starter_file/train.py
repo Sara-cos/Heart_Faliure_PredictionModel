@@ -16,7 +16,7 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 
 
 web_path = "https://raw.githubusercontent.com/Sara-cos/Heart_Faliure_PredictionModel/main/starter_file/heart_failure_clinical_records_dataset.csv"
-ds = Dataset.Tabular.from_delimited_files(web_path,
+ds = TabularDatasetFactory.from_delimited_files(web_path,
                                           validate=True,
                                           set_column_types= None,
                                           header = True,
@@ -36,12 +36,9 @@ x_train, x_test , y_train, y_test =  train_test_split(x,y,test_size=0.2,random_s
 run = Run.get_context()
 
 def clean_data(data):
-    # Dict for cleaning dat
-
+    # Dict for cleaning da
     
     x_df = data.to_pandas_dataframe().dropna()
-    
-
     print(x_df.shape)
 
     y_df = x_df.pop("DEATH_EVENT")
