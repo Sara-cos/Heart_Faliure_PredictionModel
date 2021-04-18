@@ -18,13 +18,7 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 web_path = "https://raw.githubusercontent.com/Sara-cos/Heart_Faliure_PredictionModel/main/starter_file/heart_failure_clinical_records_dataset.csv"
 ds = TabularDatasetFactory.from_delimited_files(path=web_path, validate=True, include_path=False, infer_column_types=True, set_column_types=None, separator=',', header=True, partition_format=None, support_multi_line=False, empty_as_string=False)
 
-x, y = clean_data(ds)
 
-# TODO: Split data into train and test sets.
-
-x_train, x_test , y_train, y_test =  train_test_split(x,y,test_size=0.2,random_state = 36)
-
-run = Run.get_context()
 
 def clean_data(data):
     # Dict for cleaning da
@@ -36,6 +30,14 @@ def clean_data(data):
     print(x_df.shape)
     print(y_df.shape)
     return x_df,y_df
+
+x, y = clean_data(ds)
+
+# TODO: Split data into train and test sets.
+
+x_train, x_test , y_train, y_test =  train_test_split(x,y,test_size=0.2,random_state = 36)
+
+run = Run.get_context()
 
 def main():
     # Add arguments to script
