@@ -144,7 +144,7 @@ Endpoint status
 
 
 ## Future Improvements 
-1. The serum creatinine and ejection fraction are the most relevant. thus traing using this two attributes will lend better accuracy and better performance.
+1. The serum creatinine and ejection fraction are the most relevant. thus training using this two attributes will lend better accuracy and better performance.
 2. Consume the scoring endpoint from web or other application.
 3. Deploy the best model to AKC, to provide greater scalability and performance.
 4. Another improvement would be to do a model grid search, comparing Random Forest, Support Vector Machine and Logistic Regression models, for the Hyperdrive experiment.
