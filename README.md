@@ -54,7 +54,7 @@ Serum creatinine and ejection fraction were found to be the most relevant featur
 
 #### Screenshots
 AutoML RunDetails
-![AutoML RunDetails](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/tree/main/starter_file/images/AutoML rundetails.png)
+![AutoML RunDetails](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/AutoML%20rundetails.png)
 
 AutoMl best model
 ![AutoMl best model](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/tree/main/starter_file/images/Best model(2).png)
