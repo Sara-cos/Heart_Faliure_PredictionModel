@@ -16,16 +16,7 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 
 
 web_path = "https://raw.githubusercontent.com/Sara-cos/Heart_Faliure_PredictionModel/main/starter_file/heart_failure_clinical_records_dataset.csv"
-ds = TabularDatasetFactory.from_delimited_files(web_path,
-                                          validate=True,
-                                          set_column_types= None,
-                                          header = True,
-                                          partition_format=None,
-                                          empty_as_string = False,
-                                          support_multi_line=False,
-                                          separator=',',
-                                          infer_column_types=True,
-                                          include_path=False)
+ds = TabularDatasetFactory.from_delimited_files(web_path, validate=True, include_path=False, infer_column_types=True, set_column_types=None, separator=',', header=True, partition_format=None, support_multi_line=False, empty_as_string=False)
 
 x, y = clean_data(ds)
 
