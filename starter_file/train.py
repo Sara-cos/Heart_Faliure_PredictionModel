@@ -16,7 +16,7 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 
 
 web_path = "https://raw.githubusercontent.com/Sara-cos/Heart_Faliure_PredictionModel/main/starter_file/heart_failure_clinical_records_dataset.csv"
-ds = TabularDatasetFactory.from_delimited_files(web_path, validate=True, include_path=False, infer_column_types=True, set_column_types=None, separator=',', header=True, partition_format=None, support_multi_line=False, empty_as_string=False)
+ds = TabularDatasetFactory.from_delimited_files(path=web_path, validate=True, include_path=False, infer_column_types=True, set_column_types=None, separator=',', header=True, partition_format=None, support_multi_line=False, empty_as_string=False)
 
 x, y = clean_data(ds)
 
@@ -54,8 +54,8 @@ def main():
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
 
-    os.makedirs('./outputs', exist_ok = True)
-    joblib.dump(value=model, filename ='./outputs/hd-model.joblib')
+    os.makedirs('outputs', exist_ok = True)
+    joblib.dump(value=model, filename ="./outputs/hd-model.joblib")
 
 if __name__ == '__main__':
     main()
