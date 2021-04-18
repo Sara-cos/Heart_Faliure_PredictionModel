@@ -143,7 +143,8 @@ Endpoint status
 
 ![](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/Endpoint%20running.png)
 
-
+Swagger
+![](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/Swagger%20post%20method.png)
 
 ## Future Improvements 
 1. The serum creatinine and ejection fraction are the most relevant. thus training using this two attributes will lend better accuracy and better performance.
