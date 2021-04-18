@@ -57,7 +57,7 @@ AutoML RunDetails
 ![AutoML RunDetails](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/AutoML%20rundetails.png)
 
 AutoMl best model
-![AutoMl best model](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/AutoML%20rundetails.png)
+![AutoMl best model](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/Best%20model(2).png)
 
 AutoMl Voting Ensemble model
 ![AutoMl Voting Ensemble model](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/AutoML%20model.png)
