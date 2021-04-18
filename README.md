@@ -44,13 +44,115 @@ Settings and configurations
 7. VM_size : Standard_D2_V2, 4 nodes
 
 ### Results
+Different models where trained both using Hyperdrive and Automated ML and the best model we got using automl.
+
+The best model used VotingEnsemble algorithm which reached to accuracy of 87.632%.
+The Hyperdrive accuracy reached to 76.666%
+All the columns were used for training.
+
+Serum creatinine and ejection fraction were found to be the most relevant features and are enough to predict if a patient with heart failure will survive or not, with significant accuracy.
+
+#### Screenshots
+AutoML RunDetails
+![AutoML RunDetails](Automl)
+
+AutoMl best model
+![AutoMl best model]()
+
+AutoMl Voting Ensemble model
+![AutoMl Voting Ensemble model]()
+
+### Hyperparameter Tuning
+logistic regression model with an SKLearn estimator was used in the model.
+The Hyperparameters were:
+1. C (Inverse of regularization strength), with a uniform range from 0.001 to 1.0. 
+2. max_iter (maximun number of iterations to converge), with 3 possible values: 50, 100 and 200.
+
+### Results
+
+The best model reached an accuracy of 76.66% and used the following hyperparameters:
+1. Regularization Strength: 0.5377086929082712
+2. Max iterations: 100
+
+#### Screenshots
+Hyperdrive RunDetails
+![Hyperdrive RunDetails](https://github.com/jhonatantirado/nd00333-capstone/blob/master/Hyperdrive-RunDetails.png)
+
+Hyperdrive best model
+![Hyperdrive best model](https://github.com/jhonatantirado/nd00333-capstone/blob/master/Hyperdrive-BestModel.png)
+
+Hyperdrive best model in ML Studio
+![Hyperdrive best model in ML Studio]
+
+## Best Models Comparison
+Auto ML - Voting Ensemble        : Accuracy 87.632%
+Hyperdrive - Logistic Regression : Accuracy 76.666%
+
+The Auto ML out performs with a almost 12% difference in accuracy than the Hyperdrive.
+Voting Ensemble performed better than Logistic Regression model.
+
+## Model Deployment
+The AutoML Voting Ensemble model was deployed to an Azure Container Instance using python sdk.
+
+Sample input:
+
+```
+{
+  "data": [
+    {
+      "age": 36,
+      "anaemia": 0,
+      "creatinine_phosphokinase": 200,
+      "diabetes": 0,
+      "ejection_fraction": 30,
+      "high_blood_pressure": 0,
+      "platelets": 120000,
+      "serum_creatinine": 1.1,
+      "serum_sodium": 135,
+      "sex": 1,
+      "smoking": 0,
+      "time": 7
+    },
+    {
+      "age": 39,
+      "anaemia": 0,
+      "creatinine_phosphokinase": 300,
+      "diabetes": 0,
+      "ejection_fraction": 50,
+      "high_blood_pressure": 0,
+      "platelets": 200000,
+      "serum_creatinine": 0.9,
+      "serum_sodium": 250,
+      "sex": 0,
+      "smoking": 0,
+      "time": 1
+    }
+  ]
+}
+```
+
+The input can predict several data instances in parallel.
+The content type should be set in the headers:
+- Content-Type: 'application/json'
+
+Also, if authentication is enabled, we should include key in the header as follows:
+- Authorization: Bearer {key}
+
+Endpoint status
+![]()
 
 
 
+Scoring URI Swagger documentation
+![Scoring URI Swagger documentation]()
 
+## Future Improvements 
+1. The serum creatinine and ejection fraction are the most relevant. thus traing using this two attributes will lend better accuracy and better performance.
+2. Consume the scoring endpoint from web or other application.
+3. Deploy the best model to AKC, to provide greater scalability and performance.
+4. Another improvement would be to do a model grid search, comparing Random Forest, Support Vector Machine and Logistic Regression models, for the Hyperdrive experiment.
+5. The dataset can be improved for better results.
 
-
-
-
-
-
+## Screen Recording
+[Capstone Project by Prasansha Satpathy]
+https://youtu.be/EQFYUohnBzA
