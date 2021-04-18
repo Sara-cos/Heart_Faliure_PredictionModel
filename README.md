@@ -57,10 +57,10 @@ AutoML RunDetails
 ![AutoML RunDetails](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/AutoML%20rundetails.png)
 
 AutoMl best model
-![AutoMl best model](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/tree/main/starter_file/images/Best model(2).png)
+![AutoMl best model](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/AutoML%20rundetails.png)
 
 AutoMl Voting Ensemble model
-![AutoMl Voting Ensemble model](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/tree/main/starter_file/images/AutoML model.png)
+![AutoMl Voting Ensemble model](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/AutoML%20model.png)
 
 ### Hyperparameter Tuning
 logistic regression model with an SKLearn estimator was used in the model.
@@ -76,13 +76,13 @@ The best model reached an accuracy of 76.66% and used the following hyperparamet
 
 #### Screenshots
 Hyperdrive RunDetails
-![Hyperdrive RunDetails](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/tree/main/starter_file/images/Run Details Hyperdrive.png)
+![Hyperdrive RunDetails](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/Run%20Details%20Hyperdrive.png)
 
 Hyperdrive best model
-![Hyperdrive best model](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/tree/main/starter_file/images/hyperdrive best model(1).png)
+![Hyperdrive best model](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/hyperdrive%20best%20nodel.png)
 
 Hyperdrive best model in ML Studio
-![Hyperdrive best model in ML Studio](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/tree/main/starter_file/images/Hyperdrive model.png)
+![Hyperdrive best model in ML Studio](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/Hyperdrive%20model.png)
 
 ## Best Models Comparison
 Auto ML - Voting Ensemble        : Accuracy 87.632%
@@ -139,7 +139,9 @@ Also, if authentication is enabled, we should include key in the header as follo
 - Authorization: Bearer {key}
 
 Endpoint status
-![](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/tree/main/starter_file/images/Endpoint running.png)
+![](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/Endpoints.png)
+
+![](https://github.com/Sara-cos/Heart_Faliure_PredictionModel/blob/main/starter_file/images/Endpoint%20running.png)
 
 
 
